@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$background: #66a566;
+$header: #006900;
+$editor: #e5f0e5;
+*, *::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: $background;
+  line-height: 30px;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto;
+}
+#header{
+  background-color: $header;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  .fa{
+    color: black;
+  }
+  
+}
+
+.editor-con{
+  display: block;
+  border: 1px solid black;
+  width: 80%;
+  height: 50vh;
+  margin: 2% 0 10% 10%;
+  box-shadow: -2px -2px 5px 3px #00000030, 2px 2px 5px 3px #FFFFFF30;
+  overflow: hidden;
+  #editor{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: $editor;
+  }
+}
+
+.previewer-con{
+  display: block;
+  width: 90%;
+  height: 100%;
+  border: 1px solid black;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  box-shadow: -2px -2px 5px 3px #00000030, 2px 2px 5px 3px #FFFFFF30;
+  #previewer{
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: $editor;
+  }
+}
+
+.expand-previewer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  width: 98%;
+  margin: 0 1% 2% 1%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  #previewer{
+    width: 100%;
+    height:100%;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: $editor;
+    overflow: auto;
+  }
+}
+
+.expand-editor{
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  width: 98%;
+  margin: 0 1% 2% 1%;
+  height: 100vh;
+  overflow:hidden;
+  z-index: 100;
+  #editor{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: $editor;
+    overflow: auto;
+  }
+}
+
+
+#previewer{
+  blockquote{
+    border-left: 2px solid black;
+    padding: .5rem;
+  }
+h1, h2, h3{
+  border-bottom: 1px solid black;
+  margin: 1rem;
+}
+
+code{
+  background-color: #FFFFFF;
+  padding: 1rem;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+table{
+  border-collapse: collapse;
+  th, tr, td{
+    border: 2px solid black;
+    text-align: center;
+    padding: 5px;
+  }
+}
+
+ul{
+  margin: 1rem;
+}
+}
